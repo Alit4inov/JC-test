@@ -1,0 +1,24 @@
+.carousel {
+	padding: 113px 0;
+	background-color: map-get($colors, 'gray-light-2');
+	text-align: center;
+	h2 {
+		margin-bottom: 90px;
+	}
+	p {
+		width: 79%;
+		margin: 0 auto;
+	}
+	span {
+		display: inline-block;
+		width: 100%;
+	}
+	.img-holder {
+		width: 90px;
+		height: 90px;
+		margin: 0 auto;
+		border-radius: 100%;
+		overflow: hidden;
+		margin-bottom: 34px;
+	}
+}

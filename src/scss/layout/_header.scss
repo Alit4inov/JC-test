@@ -3,17 +3,31 @@
 }
 
 .main-nav {
-	
+	display: flex;
+	margin: 0 auto;
+	max-width: 1358px;
+	height: 99px;
+	align-items: center;
+	justify-content: space-between;
+	@include media('<tablet') {
+		height: 50px;
+		padding: 0 10px;
+	}
 }
 
 .logo-holder {
+	@include animate(opacity, .3s)
 	display: block;
-	width: 30px;
-	height: 30px;
+	padding-left: 7px;
+	width: 151px;
+	height: 23px;
 	img {
 		width: 100%;
 		height: auto;
 		display: block;
+	}
+	&:hover {
+		opacity: .8;
 	}
 }
 
@@ -22,8 +36,28 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
+	@include media('<desktop') {
+        
+    }
+    @include media('<tablet') {
+    	@include animate(right, .3s);
+        width: 220px;
+        position: fixed;
+        flex-wrap: wrap;
+		padding: 20px;
+		top: 50px;
+        right: -100%;
+        background-color: map-get($colors, 'black-1');
+        z-index: 3;
+    }
 	li {
 		padding-right: 25px;
+		@include media('<tablet') {
+			width: 100%;
+			padding: 0;
+			margin-bottom: 15px;
+			text-align: right;
+		}
 		&:last-child {
 			padding: 0;
 		}
@@ -39,7 +73,6 @@
 		display: inline-block;
 		position: relative;
 		padding: 0 10px;
-		font-size: 16px;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: map-get($colors, 'white');
@@ -48,7 +81,7 @@
 			content: '';
 			position: absolute;
 			left: 0;
-			bottom: -20px;
+			bottom: -41px;
 			height: 2px;
 			width: 100%;
 			background-color: map-get($colors, 'gold');
@@ -62,13 +95,70 @@
 	}
 }
 
+.m-nav-opener {
+		display: none;
+		position: relative;
+		color: map-get($colors, 'gold');
+		padding-left: 30px;
+		line-height: 30px;
+		&:before {
+		content: '\2630';
+		font-size: 30px;
+		position: absolute;
+		left: 0;
+		color: map-get($colors, 'gold');
+	}
+	@include media('<tablet') {
+		display: block;
+	}
+}
+
+.nav-open {
+	.nav-list {
+		right: 0;
+	}
+	.m-nav-close {
+		display: block;
+	}
+}
+
+.m-nav-close {
+	display: none;
+	position: absolute;
+	width: 30px !important;
+	top: 0;
+	left: 0;
+	padding: 5px !important;
+	text-align: left !important;
+	font-size: 20px;
+	line-height: 1;
+	color: map-get($colors, 'white');
+	z-index: 10;
+}
 
 .header-bottom {
 	height: 284px;
+	padding-top: 84px;
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
+	position: relative;
+	&:after {
+    	content: "";
+    	position: absolute;
+    	background-color: rgba(36, 40, 47, .96);
+    	top: 0;
+    	left: 0;
+    	bottom: 0;
+    	right: 0;
+    }
 	h1 {
+		width: 100%;
+		max-width: 1358px;
+		margin: 0 auto;
 		color: map-get($colors, 'white');
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
 	}
 }

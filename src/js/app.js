@@ -4,13 +4,19 @@
 // Feel free with using ES6 here.
 
 import DE from './modules/helpers';
+import nav from './modules/nav';
+import owlSlide from './modules/carousel';
 
 ( ($) => {
   'use strict';
 
   // When DOM is ready
   $(() => {
+
     DE.dotsEffect();
+    nav();
+    owlSlide();
+
   });
 
 })(jQuery);
