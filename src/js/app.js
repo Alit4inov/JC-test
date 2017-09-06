@@ -6,6 +6,7 @@
 import DE from './modules/helpers';
 import navigation from './modules/nav';
 import owlSlide from './modules/carousel';
+import checkEmail from './modules/checkemail';
 
 ( ($) => {
   'use strict';
@@ -16,6 +17,7 @@ import owlSlide from './modules/carousel';
     DE.dotsEffect();
     navigation();
     owlSlide();
+    checkEmail();
 
   });
 

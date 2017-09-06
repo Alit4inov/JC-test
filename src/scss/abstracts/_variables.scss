@@ -19,20 +19,6 @@ $colors: (
 // Base font styles for headings and links.
 
 // For headers
-$headings: (
-  'sizes': (
-    'h1-font-size': 40px,
-    'h2-font-size': 24px,
-    'h3-font-size': 21px,
-    'h4-font-size': 17px,
-    'h5-font-size': 15px,
-    'h6-font-size': 14px
-  ),
-  'fonts': (
-    'headings-font-family': inherit,
-    'headings-color': inherit
-  )
-);
 
 // Global vars for body typography
 $base: (
@@ -47,6 +33,21 @@ $base: (
   'base-min-width': 320px
 );
 
+$headings: (
+  'sizes': (
+    'h1-font-size': 40px,
+    'h2-font-size': 24.3px,
+    'h3-font-size': 21px,
+    'h4-font-size': 17px,
+    'h5-font-size': 15px,
+    'h6-font-size': 14px
+  ),
+  'fonts': (
+    'headings-font-family': inherit,
+    'headings-color': inherit
+  )
+);
+
 // Vars for forms
 $forms: (
   'form-element-padding': unquote("0.4em 0.7em"),
@@ -57,7 +58,7 @@ $forms: (
 
 // Breakpoints for include media mixin
 $breakpoints: (
-  'phone': 320px,
+  'phone': 480px,
   'tablet': 768px,
   'desktop': 980px,
   'widescreen': 1200px

@@ -16,11 +16,21 @@ h6, .h6,
 }
 
 h1, .h1 {
+  font-family: map-get($base, 'base-font-sans-serif');
   font-size: map-deep-get($headings, 'sizes', 'h1-font-size');
+  @include media('<desktop') {
+    font-size: 32px !important;
+  }
+  @include media('<tablet') {
+    font-size: 24px !important;
+  }
 }
 
 h2, .h2 {
   font-size: map-deep-get($headings, 'sizes', 'h2-font-size');
+  @include media('<tablet') {
+    font-size: 18px;
+  }
 }
 
 h3, .h3 {
@@ -41,6 +51,9 @@ h6, .h6 {
 
 p {
   margin: 0 0 1em;
+  @include media('<tablet') {
+    font-size: 13px;
+  }
 }
 
 a {

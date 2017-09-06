@@ -1,10 +1,21 @@
 .thumbs-wrapper {
-	padding: 145px 0 31px 0;
+	padding: 148px 0 31px 0;
+	@include media('<widescreen') {
+		padding: 108px 0 21px 0;
+	}
+	@include media('<desktop') {
+		padding: 80px 0 21px 0;
+	}
+	@include media('<tablet') {
+		padding: 40px 0 21px 0;
+	}
 	h2 {
 		width: 100%;
 		text-align: center;
 		text-transform: uppercase;
-		margin-bottom: 60px;
+		margin-bottom: 62px;
+		font-weight: 600;
+		letter-spacing: 0.7px;
 	}
 }
 
@@ -12,10 +23,31 @@
 	display: flex;
 	width: 100%;
 	justify-content: space-between;
-	margin-bottom: 40px;
+	margin-bottom: 42px;
+	@include media('<tablet') {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin-bottom: 22px;
+	}
 }
 .thumb-holder {
 	width: 311px;
+	@include media('<widescreen') {
+		width: 28%
+	}
+	@include media('<desktop') {
+		width: 30%
+	}
+	@include media('<tablet') {
+		width: 60%;
+		margin-bottom: 35px;
+		&:last-child {
+			margin-bottom: 15px;
+		}
+	}
+	@include media('<phone') {
+		width: 80%;
+	}
 	.img-holder {
 		width: 100%;
 		max-height: 300px;
@@ -30,25 +62,45 @@
 		padding-top: 26px;
 		display: flex;
 		justify-content: space-between;
+		flex-wrap: wrap;
+		@include media('<widescreen') {
+		padding-top: 10px;
+		}
 	}
 	.text-holder {
-		width: 50%;
+		width: 60%;
 		padding-left: 11px;
 		color: map-get($colors, 'black-3');
 		font-size: 16px;
-		text-transform: uppercase;
+		@include media('<widescreen') {
+			width: 100%;
+			padding: 0 5px;
+			text-align: center;
+			margin-bottom: 10px;
+		}
 		span {
 			display: inline-block;
 			width: 100%;
+			font-family: map-get($base, 'base-font-sans-serif');
 			font-weight: 500;
+			text-transform: uppercase;
+
 		}
 		span:nth-child(2n) {
+			font-family: map-get($base, 'base-font-family');
 			font-size: 14px;
+			font-weight: 400;
 			text-transform: capitalize;
 		}
 	}
 	.soc-icons {
-		width: 50%;
+		width: 40%;
+		@include media('<widescreen') {
+			width: 100%;
+			padding: 0 5px;
+			display: flex;
+			justify-content: center;
+		}
 	}
 }
 

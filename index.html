@@ -8,6 +8,7 @@
   <title>Web Starter Kit</title>
   <link media="all" rel="stylesheet" href="assets/css/vendor.min.css">
   <link media="all" rel="stylesheet" href="assets/css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600|Raleway:500,600,700" rel="stylesheet">
 </head>
 
 <body>
@@ -29,7 +30,9 @@
       </nav>
     </header>
     <div class="header-bottom" style="background-image:url(assets/images/header-banner.jpg)">
+      <div class="title-holder">
         <h1>More about us</h1>
+      </div>
     </div>
     <main id="main">
       <div id="content">
@@ -134,21 +137,25 @@
           <div class="form-column">
             <span class="column-title">Subscribe to our newsletter</span>
             <form action="#">
-              <input type="email" class="form-control" placeholder="Enter your email address" required>
+              <input type="email" id="userEmail" class="form-control" placeholder="Enter your email address" required>
               <button class="form-btn" type="submit">SUBSCRIBLE NOW</button>
             </form>
           </div>
         </div>
-        <div class="footer-bottom">
-          <span class="copyright">© 2016  Fapor by Respotheme</span>
-          <ul class="soc-icons">
-            <li><a href=""><i class="icon-facebook"></i></a></li>
-            <li><a href=""><i class="icon-twitter"></i></a></li>
-            <li><a href=""><i class="icon-google_plus"></i></a></li>
-            <li><a href=""><i class="icon-dribble"></i></a></li>
-          </ul>
-        </div> 
       </div>
+      <div class="footer-bottom">
+        <div class="container">
+          <div class="footer-content"> 
+            <span class="copyright">© 2016  Fapor by Respotheme</span>
+            <ul class="soc-icons">
+              <li><a href=""><i class="icon-facebook"></i></a></li>
+              <li><a href=""><i class="icon-twitter"></i></a></li>
+              <li><a href=""><i class="icon-google_plus"></i></a></li>
+              <li><a href=""><i class="icon-dribble"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div> 
     </footer> 
   </div>
   <script src="assets/js/vendor.min.js" defer></script>

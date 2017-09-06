@@ -1,20 +1,43 @@
 .carousel-wrapper {
-	padding: 113px 0;
+	padding: 113px 0 118px 0;
 	background-color: map-get($colors, 'gray-light-2');
 	text-align: center;
+    @include media('<widescreen') {
+        padding: 80px 0;
+    }
+    @include media('<tablet') {
+        padding: 40px 0;
+    }
 	h2 {
 		margin-bottom: 90px;
+        letter-spacing: -1.1px;
+        @include media('<widescreen') {
+            margin-bottom: 60px;
+        }
+        @include media('<tablet') {
+            margin-bottom: 35px;
+        }
 	}
+    .decorated {
+        &:after {
+        background-color: map-get($colors, 'black-1')
+    }
+}
 	p {
-		width: 79%;
+		width: 80%;
 		margin: 0 auto;
 		font-weight: 300;
-		line-height: 1.5;
-		margin-bottom: 28px;
+		line-height: 1.6;
+        letter-spacing: 0.7px;
+		margin-bottom: 40px;
+        @include media('<widescreen') {
+            margin-bottom: 20px;
+        }
 	}
 	span {
 		display: inline-block;
 		width: 100%;
+        letter-spacing: 0.7px;
 	}
 	.marked-gold {
 		font-size: 16px;
@@ -29,6 +52,11 @@
 		border-radius: 100%;
 		overflow: hidden;
 		margin-bottom: 34px;
+        img {
+            width: 100%;
+            height: auto;
+            transform: scale(1.35) translateY(4px);
+        }
 	}
 	.owl-nav {
         font-size: 0px;
@@ -36,7 +64,7 @@
             @include animate(opacity, .3s);
             position: absolute;
             left: 0;
-            top: 50%;
+            top: 28%;
             transform: translateY(-50%);
             font-size: 0px;
             padding: 0;
@@ -46,14 +74,14 @@
             &:after {
                 font-family: icomoon;
                 content: "\f053";
-                font-size: 24px;
+                font-size: 18px;
             }
         }
         .owl-next {
             @include animate(opacity, .3s);
             position: absolute;
             font-size: 0px;
-            top: 50%;
+            top: 28%;
             right: 0;
             transform: translateY(-50%);
             padding: 0;
@@ -67,7 +95,7 @@
             &:after {
                 font-family: icomoon;
                 content: "\f054";
-                font-size: 24px;
+                font-size: 18px;
             }
         }
     }

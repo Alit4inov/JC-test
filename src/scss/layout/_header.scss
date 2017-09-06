@@ -4,21 +4,25 @@
 
 .main-nav {
 	display: flex;
-	margin: 0 auto;
 	max-width: 1358px;
-	height: 99px;
+	margin: 0 auto;
+	width: 100%;
+	height: 100px;
 	align-items: center;
 	justify-content: space-between;
+	@include media('<1600px') {
+		max-width: 1153px;
+		padding: 0 15px;
+	}
 	@include media('<tablet') {
 		height: 50px;
-		padding: 0 10px;
 	}
 }
 
 .logo-holder {
 	@include animate(opacity, .3s)
 	display: block;
-	padding-left: 7px;
+	margin-left: 7px;
 	width: 151px;
 	height: 23px;
 	img {
@@ -36,9 +40,10 @@
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	@include media('<desktop') {
-        
-    }
+	transform: translateX(50px);
+	@include media('<1600px') {
+		transform: translateX(0);
+	}
     @include media('<tablet') {
     	@include animate(right, .3s);
         width: 220px;
@@ -51,7 +56,10 @@
         z-index: 3;
     }
 	li {
-		padding-right: 25px;
+		padding-right: 36px;
+		@include media('<widescreen') {
+			padding-right: 18px;
+		}
 		@include media('<tablet') {
 			width: 100%;
 			padding: 0;
@@ -61,21 +69,29 @@
 		&:last-child {
 			padding: 0;
 		}
-		&:active {
-			a {
-				&:before {
-					opacity: 1;
+		&.active {
+			a:before {
+				opacity: 1;
+				@include media('<tablet') {
+					display: none;
 				}
 			}
+			@include media('<tablet') {
+				a {
+					color: map-get($colors, 'gold');
+				}
+			}
+
 		}
 	}
 	a {
 		display: inline-block;
 		position: relative;
-		padding: 0 10px;
+		padding: 0 15px;
 		text-transform: uppercase;
 		text-decoration: none;
 		color: map-get($colors, 'white');
+		letter-spacing: 0.6px;
 		&:before {
 			@include animate(opacity, .3s)
 			content: '';
@@ -86,10 +102,16 @@
 			width: 100%;
 			background-color: map-get($colors, 'gold');
 			opacity: 0;
+			@include media('<tablet') {
+				display: none;
+			}
 		}
-		&:hover {
+		&:focus:hover {
 			&:before {
 				opacity: 1;
+			}
+			@include media('<tablet') {
+				color: map-get($colors, 'gold');
 			}
 		}
 	}
@@ -125,12 +147,12 @@
 .m-nav-close {
 	display: none;
 	position: absolute;
-	width: 30px !important;
+	width: 34px !important;
 	top: 0;
 	left: 0;
-	padding: 5px !important;
+	padding: 10px !important;
 	text-align: left !important;
-	font-size: 20px;
+	font-size: 24px;
 	line-height: 1;
 	color: map-get($colors, 'white');
 	z-index: 10;
@@ -138,11 +160,37 @@
 
 .header-bottom {
 	height: 284px;
-	padding-top: 84px;
+	padding-top: 82px;
 	background-size: cover;
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	position: relative;
+	@include media('<desktop') {
+			height: 200px;
+		}
+	@include media('<tablet') {
+			height: 160px;
+		}
+	@include media('retina2x') {
+			background-image:url(../images/header-banner_2x.jpg);
+		}
+	.title-holder {
+		width: 100%;
+		max-width: 1358px;
+		margin: 0 auto;
+		@include media('<1600px') {
+		max-width: 1153px;
+		padding: 0 15px;
+		}
+	}		
+	h1 {
+		width: 100%;
+		color: map-get($colors, 'white');
+		text-transform: uppercase;
+		position: relative;
+		letter-spacing: 0.5px;
+		z-index: 1;
+	}
 	&:after {
     	content: "";
     	position: absolute;
@@ -152,13 +200,4 @@
     	bottom: 0;
     	right: 0;
     }
-	h1 {
-		width: 100%;
-		max-width: 1358px;
-		margin: 0 auto;
-		color: map-get($colors, 'white');
-		position: relative;
-		text-transform: uppercase;
-		z-index: 1;
-	}
 }

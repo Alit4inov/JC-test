@@ -1,8 +1,10 @@
 .btn {
 	@include animate(background-color border color, .3s)
 	display: inline-block;
-	padding: 0 42px;
-	line-height: 50px;
+	padding: 0 40px;
+	line-height: 48px;
+	font-size: 16px;
+	letter-spacing: 0.8px;
 	color: map-get($colors, 'black-1');
 	border: 1px solid map-get($colors, 'black-1');
 	border-radius: 40px;
