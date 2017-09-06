@@ -1,0 +1,33 @@
+#footer {
+	color: map-get($colors, 'gray');
+	background-color: map-get($colors, 'black-2');
+}
+
+.column-title {
+	color: map-get($colors, 'gold');
+}
+
+.columns-holder {
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+}
+.text-column {
+	max-width: 300px;
+}
+.contact-column {
+	max-width: 205px;
+}
+.form-column {
+	max-width: 299px;
+}
+
+.footer-bottom {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.copyright {
+	font-size: 12px;
+}
