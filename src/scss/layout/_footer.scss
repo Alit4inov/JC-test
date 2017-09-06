@@ -126,3 +126,11 @@
 .copyright {
 	font-size: 12px;
 }
+
+.validation-info {
+	display: none;
+	&.error {
+		display: inline-block;
+		margin-bottom: 10px;
+	}
+}

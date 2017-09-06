@@ -106,7 +106,7 @@
 				display: none;
 			}
 		}
-		&:focus:hover {
+		&:focus,&:hover {
 			&:before {
 				opacity: 1;
 			}
