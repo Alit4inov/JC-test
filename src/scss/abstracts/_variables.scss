@@ -50,9 +50,9 @@ $base: (
 // Vars for forms
 $forms: (
   'form-element-padding': unquote("0.4em 0.7em"),
-  'form-element-border-color': #999,
-  'form-element-focus-border-color': #000,
-  'placeholder-color': #999
+  'form-element-border-color': map-get($colors, 'gray'),
+  'form-element-focus-border-color': map-get($colors, 'gray'),
+  'placeholder-color': map-get($colors, 'gray')
 );
 
 // Breakpoints for include media mixin

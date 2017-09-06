@@ -1,10 +1,49 @@
 #footer {
+	padding-top: 40px; 
 	color: map-get($colors, 'gray');
 	background-color: map-get($colors, 'black-2');
+	a {
+		color: inherit;
+		text-decoration: none;
+	}
+	address {
+		margin-bottom: 20px;
+		font-style: normal;
+	}
+	.soc-icons {
+		@extend %listreset;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding: 0 9px 0 0;
+		li {
+			padding-left: 7px;
+			&:last-child {
+				i {
+
+				}
+			}
+		}
+		i {
+			background: transparent;
+			border: 1px solid map-get($colors, 'gray');
+		}
+		a:hover {
+			i {
+				border: 1px solid map-get($colors, 'gold');
+				color: map-get($colors, 'white');
+				background-color: map-get($colors, 'gold');
+			}
+		}
+	}
 }
 
 .column-title {
+	display: inline-block;
 	color: map-get($colors, 'gold');
+	font-weight: 500;
+	text-transform: uppercase;
+	margin-bottom: 20px;
 }
 
 .columns-holder {
@@ -22,7 +61,24 @@
 	max-width: 299px;
 }
 
+.form-control {
+	width: 100%;
+	line-height: 24px;
+	background: transparent;
+	border: 0;
+	border: 1px solid map-get($colors, 'gray');
+	outline: 0;
+	margin-bottom: 10px;
+	&:focus {
+		box-shadow: 0 0 2px map-get($colors, 'white');
+	}
+	@include placeholder {
+		color: map-get($colors, 'gray');
+	}
+}
+
 .footer-bottom {
+	padding: 15px 0;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;

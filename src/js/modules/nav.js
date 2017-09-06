@@ -1,4 +1,4 @@
-var nav = function() {
+var navigation = function() {
 
     $('.m-nav-opener').on("click", function() {
         $('body').toggleClass('nav-open');
@@ -8,4 +8,4 @@ var nav = function() {
     });
 
 };
-export default nav;
+export default navigation;

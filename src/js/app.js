@@ -4,7 +4,7 @@
 // Feel free with using ES6 here.
 
 import DE from './modules/helpers';
-import nav from './modules/nav';
+import navigation from './modules/nav';
 import owlSlide from './modules/carousel';
 
 ( ($) => {
@@ -14,7 +14,7 @@ import owlSlide from './modules/carousel';
   $(() => {
 
     DE.dotsEffect();
-    nav();
+    navigation();
     owlSlide();
 
   });

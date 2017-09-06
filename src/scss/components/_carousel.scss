@@ -33,78 +33,41 @@
 	.owl-nav {
         font-size: 0px;
         .owl-prev {
-            @include animate(transform,
-            .1s);
-            background-color: transparent;
+            @include animate(opacity, .3s);
             position: absolute;
-            left: -90px;
-            top: 46%;
-            transform: translateY(-50%) scale(1) translate3d(0, 0, 0);
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
             font-size: 0px;
             padding: 0;
-            @include media('<1400px') {
-                left: 15px;
-            }
-            @include media('<widescreen') {
-                left: -5px;
-            }
-
             &:hover {
-                background-color: transparent;
-                transform: translateY(-50%) scale(1.1) translate3d(0, 0, 0);
+                opacity: .7;
             }
             &:after {
                 font-family: icomoon;
-                content: "\e901";
-                font-size: 57px;
-                @include media('<widescreen') {
-                    font-size: 50px;
-                }
-                @include media('<desktop') {
-                    font-size: 40px;
-                }
-                @include media('<tablet') {
-                    font-size: 30px;
-                }
+                content: "\f053";
+                font-size: 24px;
             }
         }
         .owl-next {
-            @include animate(transform,
-            .1s);
-            background-color: transparent;
+            @include animate(opacity, .3s);
             position: absolute;
-            right: 0;
             font-size: 0px;
-            top: 46%;
-            right: -90px;
-            transform: translateY(-50%) scale(1) translate3d(0, 0, 0);
+            top: 50%;
+            right: 0;
+            transform: translateY(-50%);
             padding: 0;
-            @include media('<1400px') {
-                left: auto;
-                right: 15px;
-            }
             @include media('<widescreen') {
                 left: auto;
                 right: -5px;
             }
-
             &:hover {
-                background-color: transparent;
-                transform: translateY(-50%) scale(1.1) translate3d(0, 0, 0);
+                opacity: .7;
             }
             &:after {
                 font-family: icomoon;
-                content: "\e905";
-                font-size: 57px;
-                @include media('<widescreen') {
-                    font-size: 50px;
-                }
-                @include media('<desktop') {
-                    font-size: 40px;
-                }
-                @include media('<tablet') {
-                    font-size: 30px;
-                }
+                content: "\f054";
+                font-size: 24px;
             }
         }
     }

@@ -1,4 +1,5 @@
 .btn {
+	@include animate(background-color border color, .3s)
 	display: inline-block;
 	padding: 0 42px;
 	line-height: 50px;
@@ -7,4 +8,23 @@
 	border-radius: 40px;
 	text-transform: uppercase;
 	text-decoration: none;
+	&:hover {
+		background-color: map-get($colors, 'gold');
+		color: map-get($colors, 'white');
+		border: 1px solid transparent;
+	}
+
+}
+
+.form-btn {
+	@include animate(opacity, .3s)
+	width: 100%;
+	padding: 5px 20px;
+	background-color: map-get($colors, 'gold');
+	line-height: 24px;
+	color: map-get($colors, 'white');
+	border: 0;
+	&:hover {
+		opacity: .7;
+	}
 }
