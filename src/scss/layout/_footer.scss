@@ -29,9 +29,9 @@
 		padding: 0;
 		li {
 			padding-left: 11px;
-			&:last-child {
+			&:last-of-type {
 				i {
-
+					padding-left: 3px;
 				}
 			}
 		}

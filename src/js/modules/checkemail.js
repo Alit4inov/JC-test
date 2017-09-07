@@ -5,40 +5,28 @@ var checkEmail = function(email) {
 	var mail = $('#mail');
 	var info = $('.validation-info');
 	
-	mail.blur(function(){
+	
+	mail.blur(function validate(){
 		if(mail.val() != ''){
 				if(mail.val().search(pattern) == 0){
-					$('#valid').text('Подходит');
 					$('#submit').attr('disabled', false);
-					mail.removeClass('error').addClass('ok');
+					info.removeClass('error');
 				}else{
-					$('#valid').text('Не подходит');
+					$('#valid').text('Please enter valid email');
 					$('#submit').attr('disabled', true);
-					mail.addClass('ok');
+					info.addClass('error');
 				}
 			}else{
-				$('#valid').text('Поле e-mail не должно быть пустым!');
-				mail.addClass('error');
+				$('#valid').text('Please enter email');
+				info.addClass('error');
 				$('#submit').attr('disabled', true);
 			}
+		});
+
+	$(function() {
+	   $('.form-btn').on('click', validate);
 	});
 
 };
 
 export default checkEmail;
-
-
-// mail.blur(function(){
-// 		if(mail.val() != ''){
-// 				if(mail.val().search(pattern) == 0){
-// 					$('#submit').attr('disabled', false);
-// 				}else{
-// 					$('#valid').text('Please enter valid email');
-// 					// $('#submit').attr('disabled', true);
-// 				}
-// 			}else{
-// 				$('#valid').text('Please enter email');
-// 				info.addClass('error');
-// 				$('#submit').attr('disabled', true);
-// 			}
-// 	});
