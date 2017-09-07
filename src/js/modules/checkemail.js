@@ -21,12 +21,12 @@ var checkEmail = function(email) {
 				info.addClass('error');
 				$('#submit').attr('disabled', true);
 			}
+
+			$(function() {
+			   $('.form-btn').on('click', validate);
+			});
+
 		});
-
-	$(function() {
-	   $('.form-btn').on('click', validate);
-	});
-
 };
 
 export default checkEmail;
