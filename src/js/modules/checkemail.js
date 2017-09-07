@@ -8,19 +8,17 @@ var checkEmail = function(email) {
 	mail.blur(function(){
 		if(mail.val() != ''){
 				if(mail.val().search(pattern) == 0){
-					$('#valid').text('ОК');
+					$('#valid').text('Подходит');
 					$('#submit').attr('disabled', false);
 					mail.removeClass('error').addClass('ok');
 				}else{
-					$('#valid').text('Please enter valid email');
+					$('#valid').text('Не подходит');
 					$('#submit').attr('disabled', true);
 					mail.addClass('ok');
-
 				}
 			}else{
-				$('#valid').text('Please enter valid email');
+				$('#valid').text('Поле e-mail не должно быть пустым!');
 				mail.addClass('error');
-				info.addClass('error');
 				$('#submit').attr('disabled', true);
 			}
 	});
@@ -28,3 +26,19 @@ var checkEmail = function(email) {
 };
 
 export default checkEmail;
+
+
+// mail.blur(function(){
+// 		if(mail.val() != ''){
+// 				if(mail.val().search(pattern) == 0){
+// 					$('#submit').attr('disabled', false);
+// 				}else{
+// 					$('#valid').text('Please enter valid email');
+// 					// $('#submit').attr('disabled', true);
+// 				}
+// 			}else{
+// 				$('#valid').text('Please enter email');
+// 				info.addClass('error');
+// 				$('#submit').attr('disabled', true);
+// 			}
+// 	});
